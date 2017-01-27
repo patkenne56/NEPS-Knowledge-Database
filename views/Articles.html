@@ -1,0 +1,47 @@
+<!doctype html>
+<script type="text/javascript" src="ejs_production.js"></script>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML Page Articles</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+    <div id="header">
+    	<div class="wrap">
+    	    <h2 class="page-title">NEPS Articles
+
+          </h2>
+            <li><a href="/localhost:8080">Home</a></li>
+        </div>
+
+    </div>
+<body>
+  <table >
+          <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>title</th>
+                  <th>Symptoms</th>
+                  <th>Summary</th>
+                  <th>Cause</th>
+                  <th>Resolution</th>
+                  <th>Tags</th>
+                  <th>Attachments</th>
+                  <th>Customer</th>
+                  <th>User</th>
+                  <th>Created</th>
+                  <th>Modified</th>
+              </tr>
+          </thead>
+           <tbody>
+           <% print.forEach(function (Articles) { %>
+              <tr>
+                  <td><%= Articles.ID %></td>
+              </tr>
+           <% }) %>
+           </tbody>
+      </table>
+  </body>
+  </html>
